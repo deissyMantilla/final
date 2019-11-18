@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesPerfil.css" />
+    <title>Nombre red</title>
+  </head>
+  <body>
+    <div class="global">
+      <header>
+        <nav class="navPrincipal">
+          <div class="logoAplicacion">
+            <img src="img/logo.png" alt="Logo She Codes App" />
+          </div>
+          <div class="menuPrincipal">
+            <ul>
+              <li class="navA">
+                <i class="fas fa-paper-plane"></i><a href="#">Mensajes</a>
+              </li>
+              <li class="navA">
+                <i class="fas fa-user-friends"></i><a href="#">Amigos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="perfilUsuario">
+            <div class="nombreUsuario navA">
+              <a href="#" >Nombre de Usuario</a>
+            </div>
+            <div class="imagenPerfil">
+              <img
+                src="img/joe-gardner-fn_BT9fwg_E-unsplash.jpg"
+                alt="Perfil Usuario"
+              />
+            </div>
+          </div>
+        </nav>
+        <div class="menuResponsive">
+          <ul>
+            <li class="navA">
+              <i class="fas fa-paper-plane"></i><a href="#">Mensajes</a>
+            </li>
+            <li class="navA">
+              <i class="fas fa-user-friends"></i><a href="#">Amigos</a>
+            </li>
+            <li class="navA">
+              <i class="fas fa-user"></i><a href="#">perfil</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="contenido">
+        <aside id="aside">
+          <img
+            src="img/grupomujeres.svg"
+            height="30%"
+            width="80%"
+            alt=""
+            id="imagen"
+          />
+          <button id="botonGaleria" class="botonCambio">Galeria</button>
+          <button id="botonInformacion" class="botonCambio">Información</button>
+          <button id="botonPublicaciones" class="botonCambio">
+            Publicaciones
+          </button>
+        </aside>
+        <section id="section">
+          <div id="galeria" class="divCambio ">
+            <div class="mostrarFotos">
+              <img
+                id="fotoPrincipal"
+                src="img/nathan-dumlao-3vJUBcuhwoU-unsplash.jpg"
+                alt=""
+              />
+            </div>
+            <div class="album">
+              <img
+                src="img/daria-nepriakhina-i5iIhHSAtp4-unsplash.jpg"
+                class="foto"
+              />
+              <img
+                src="img/karim-manjra-zCPPpU-vwdc-unsplash.jpg"
+                class="foto"
+              />
+
+              <img
+                src="img/sasha-freemind-nXo2ZsKHTHg-unsplash.jpg"
+                class="foto"
+              />
+              <img
+                src="img/jens-lindner-4i7-mcM7xSY-unsplash.jpg"
+                class="foto"
+              />
+            </div>
+            <input type="file" id="subirFoto" />;
+            <button id="botonSubirFoto" class="btnForm">Subir Foto</button>
+          </div>
+          <div id="informacion" class="divCambio">
+            <div id="infoBasica" class="colorNegro">
+              <h2 style="color: white ; font-size: 30px">Tu perfil</h2>
+              <img
+                id="logoImagen"
+                src="img/Logo.png"
+                height="30%"
+                width="20%"
+                alt=""
+              />
+              <div class="divInfoBasica">
+                <label for=""><b>Nombres:</b> </label>
+                <p id="infoNombre"></p>
+              </div>
+              <div class="divInfoBasica">
+                <label for=""><b>Apellidos:</b> </label>
+                <p id="infoApellido"></p>
+              </div>
+              <div class="divInfoBasica">
+                <label for="">Correo Electrónico: </label>
+                <p id="infoCorreo"></p>
+              </div>
+              <div class="divInfoBasica">
+                <label for="">Fecha de Nacimiento: </label>
+                <p id="infoFecha"></p>
+              </div>
+            </div>
+            <div id="infoAdicional" class="colorNegro">
+              <div id="infoEstatica" class="colorNegro">
+                <div class="infoEstatica">
+                  <div class="presentacion">
+                    <label for="">Presentación:</label>
+                    <p id="pPres" class="parrafo"></p>
+                  </div>
+                  <br />
+                  <div class="telefono">
+                    <label for="">Teléfono:</label>
+                    <p id="pTel" class="parrafo"></p>
+                  </div>
+                  <br />
+                  <div class="ciudad">
+                    <label for="">Ciudad: </label>
+                    <p id="pCiudad" class="parrafo"></p>
+                  </div>
+                  <br />
+                  <div class="trabajo">
+                    <label for="">Trabajo:</label>
+                    <p id="pTrabajo" class="parrafo"></p>
+                  </div>
+                  <br />
+                  <div class="infoAcademica">
+                    <label for="">Información Académica:</label>
+                    <p id="pAcademica" class="parrafo"></p>
+                  </div>
+                  <br />
+                  <div class="redes">
+                    <label for="">Redes Sociales:</label>
+                    <p id="pRedes" class="parrafo"></p>
+                  </div>
+                  <br />
+                  <div class="paginaWeb">
+                    <label for="">Página Web:</label>
+                    <p id="pWeb" class="parrafo"></p>
+                  </div>
+                </div>
+
+                <button id="btnEditarInfo" class="btnForm">Editar</button>
+              </div>
+              <div id="infoEditable" class="colorNegro">
+                <div class="infoEditable">
+                  <label for="">Presentacion:</label>
+                  <input id="inputPres" class="inputC " />
+
+                  <label for="">Telefono:</label>
+                  <input id="inputTel" class="inputC " />
+
+                  <label for="">Ciudad: </label>
+                  <input id="inputCiudad" class="inputC " />
+
+                  <label for="">Trabajo:</label>
+                  <input id="inputTrabajo" class="inputC " />
+
+                  <label for="">Informacion Academica:</label>
+                  <input id="inputAcademica" class="inputC " />
+
+                  <label for="">Redes Sociales:</label>
+                  <input id="inputRedes" class="inputC " />
+
+                  <label for="">Pagina Web:</label>
+                  <input id="inputWeb" class="inputC " />
+                </div>
+                <button id="btnGuardarInfo" class="btnForm">Guardar</button>
+              </div>
+            </div>
+          </div>
+          <div id="publicaciones" class="divCambio">
+            <div id="myDIV" class="headerPublicaciones">
+              <h2 style="margin:5px">Mis publicaciones</h2>
+              <input
+                type="text"
+                id="myInput"
+                placeholder="Hola Programadora! ¿Cómo estás en el día de hoy?"
+                maxlength="100"
+              />
+              <span class="addBtn">Publicar</span>
+            </div>
+
+            <ul id="myUL">
+              <li>
+                Hoy 11 de septiembre se escogio el nombre de la red social "SHE
+                CODES APP"😁
+              </li>
+              <li>
+                Chicas el viernes 13 de septiembre se sustentara nuestra Red
+                social 😊
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

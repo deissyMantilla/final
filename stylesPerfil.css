@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* color: white; */
+  font-family: "Raleway", sans-serif;
+}
+header {
+  background-color: #706381;
+}
+#botonPublicaciones {
+  background: #f7de1c;
+}
+.botonCambio {
+  border-radius: 20px;
+  background-color: #e8e7e1;
+  width: 80%;
+  font-size: 20px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+  box-shadow: 3px 3px 20px gray;
+}
+.botonCambio:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  color: black;
+}
+.contenido {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: auto;
+}
+aside {
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8e7e1;
+  background-image: url(img/fondo-luminoso-puntos_1055-3132.jpg);
+
+  background-size: 110%;
+
+  /* filter: blur(0.2px); */
+  animation: movimiento 12s infinite linear alternate-reverse;
+}
+@keyframes movimiento {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
+
+#imagen {
+  filter: grayscale(90%);
+}
+
+section {
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100%;
+}
+.divCambio {
+  width: 100%;
+  height: auto;
+  color: black;
+}
+#galeria {
+  background: #fff;
+  grid-area: 1/1;
+  z-index: -2;
+}
+#informacion {
+  background-color: #e8e7e1;
+  grid-area: 1/1;
+  z-index: -3;
+}
+#publicaciones {
+  background-color: #fff;
+  grid-area: 1/1;
+  z-index: 0;
+}
+.album {
+  overflow-y: scroll;
+  height: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  padding: 5px;
+}
+.mostrarFotos {
+  width: 700px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+#fotoPrincipal {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 3px 3px 20px gray;
+}
+.fotoPerfil {
+  width: 60%;
+  height: 130px;
+  border-radius: 50%; /* 
+  border: 2px solid black; */
+  margin: 10px;
+}
+.foto {
+  width: 90%;
+  height: 200px;
+  border-radius: 50%; /* 
+  border: 2px solid black; */
+  margin: 10px;
+}
+.foto:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+/* Estilo publicaciones*/
+
+/* Remove margins and padding from the list */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+#myUL li {
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  box-shadow: 3px 3px 5px gray;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: black;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#myUL li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#myUL li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+#myUL li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#myUL li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f7de1c;
+  color: white;
+}
+
+/* Style the header */
+.headerPublicaciones {
+  border-radius: 20px;
+  margin: 10px;
+  border: 10px #e8e7e1;
+  background-color: #7063819d;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+
+.headerPublicaciones:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+#myInput {
+  color: black;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #f7de1c;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.colorNegro {
+  color: black;
+}
+
+#informacion {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+#infoBasica {
+  background: #bbb;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#infoAdicional {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#infoEstatica {
+  background: #e8e7e1;
+  border-radius: 20px;
+  text-align: justify;
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+  z-index: 0;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.infoEstatica {
+  width: 80%;
+}
+
+#infoEditable {
+  background: #e8e7e1;
+  border-radius: 20px;
+  text-align: justify;
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+  z-index: -1;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.infoEditable {
+  display: grid;
+  grid-template-columns: 150px 300px;
+  grid-template-rows: repeat(7, 30px);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+
+  background-image: url(img/CUBOS.jpg);
+  background-size: 70%;
+  background-attachment: fixed;
+  filter: grayscale(90%);
+  animation: movi 40s infinite linear alternate;
+}
+@keyframes movi {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
+.divInfoBasica {
+  display: flex;
+  width: 80%;
+}
+label {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.btnForm {
+  border: none;
+  width: 100px;
+  height: 30px;
+  background-color: rgb(172, 172, 172);
+  margin: 10px;
+  padding: 5px;
+}
+.btnForm:hover {
+  background-color: #f7de1c;
+}
+.inputC {
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  color: #8f72b4;
+  text-align: center;
+}
+.inputC:hover {
+  background-color: #e1dee6;
+  color: #8f72b4;
+  border: none;
+}
+
+@media (max-width: 890px) {
+  .album {
+    grid-template-columns: repeat(3, 30%);
+  }
+  .mostrarFotos {
+    width: 500px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 698px) {
+  .album {
+    grid-template-columns: repeat(2, 30%);
+  }
+  .mostrarFotos {
+    width: 300px;
+    height: 150px;
+  }
+  #galeria {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 486px) {
+  .album {
+    grid-template-columns: repeat(2, 20%);
+  }
+  .mostrarFotos {
+    width: 200px;
+    height: 150px;
+  }
+
+  aside {
+    width: 100px;
+  }
+  .botonCambio {
+    width: 80%;
+    font-size: 12px;
+    margin: 5px;
+  }
+}
+
+/* Estilos del nav */
+
+/* Nav Principal  */
+.navPrincipal {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  position: sticky;
+  top: 0;
+}
+
+/* Sesion Logo  */
+.logoAplicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoAplicacion img {
+  height: 50px;
+}
+
+.menuPrincipal,
+.logoAplicacion {
+  height: 100px;
+  background: #706381;
+}
+
+/* Sesion Menu  */
+.menuPrincipal ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  height: inherit;
+}
+
+.menuPrincipal ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #706381 8px solid;
+  padding: 0 20px;
+  height: inherit;
+}
+
+.menuPrincipal li:hover a,
+.menuPrincipal li:hover i,
+.menuPrincipal li:active a,
+.menuPrincipal li:active i {
+  color: #f7de1c;
+}
+
+.menuPrincipal ul li:hover,
+.menuPrincipal ul li:active {
+  border-bottom: #f7de1c 8px solid;
+}
+
+.navA a,
+i {
+  text-decoration: none;
+  color: #e8e7e7;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+
+i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Sesion Perfil  */
+
+.perfilUsuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5f5073;
+  height: 100%;
+}
+
+.imagenPerfil img {
+  border-radius: 50%;
+  height: 60px;
+  margin-left: 30px;
+}
+
+/* otras sesiones  */
+
+.menuResponsive {
+  display: none;
+}
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  /* nav principal  */
+  .navPrincipal {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  /* sesion logo  */
+
+  .logoAplicacion {
+    height: 75px;
+  }
+
+  .logoAplicacion img {
+    border-radius: 30px;
+  }
+
+  /* sesion menu responsive  */
+
+  .menuResponsive {
+    display: block;
+    position: sticky;
+    top: 0;
+  }
+
+  .menuResponsive ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #5f5073;
+  }
+  .menuResponsive li {
+    padding: 5px;
+    height: 50px;
+    flex-basis: 100%;
+    border-bottom: #5f5073 4px solid;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menuResponsive li:hover,
+  .menuResponsive li:active {
+    border-bottom: #f7de1c 4px solid;
+  }
+  .navA a,
+  i {
+    font-size: 12px;
+  }
+
+  .menuResponsive li:hover a,
+  .menuResponsive li:hover i,
+  .menuResponsive li:active a,
+  .menuResponsive li:active i {
+    color: #f7de1c;
+  }
+
+  /* otras sesiones  */
+
+  .menuPrincipal,
+  .perfilUsuario {
+    display: none;
+  }
+}

@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ​
+  .contenedor {
+    height: 100vh;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-family: "Roboto", sans-serif;
+  }
+  ​
+  .fondoRegistro {
+    background-color: #e8e7e4;
+    /* height: 100vh; */
+    padding: 10px;
+    margin: 5px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    transition: all 0.9s;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.09);
+  }
+  ​
+  .fondoIngreso {
+    background-color: #e8e7e4;
+    /* height: 100vh; */
+    padding: 10px;
+    margin: 5px;
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.09);
+  }
+  ​
+  .pieDePagina {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 13;
+    grid-row-end: 14;
+    background-color: white;
+    color: gray;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    padding-top: 15px;
+  }
+  ​
+  a {
+    text-decoration: none;
+    color: inherit;
+    text-align: right;
+  }
+  ​
+  .formulario1 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    display: flex;
+    /* flex-direction: row; */
+    /* align-content: center; */
+    /* justify-content: space-around;
+    justify-content: space-between; */
+    align-self: center;
+    flex-direction: column;
+    column-count: 1;
+    text-align: center;
+    /* z-index: 1;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -webkit-transition: opacity 0.7s; */
+    opacity: 0;
+    /*  width: 70vw; */
+    /*   column-count: 2;
+    column-gap: 3em;
+    column-rule: 1px solid #bbb; */
+  }
+  ​
+  .formulario1:hover {
+    -webkit-transition: opacity 0.7s;
+    /* opacity: 1; */
+    display: flex;
+    flex-direction: column;
+  }
+  ​
+  .formulario2 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    -moz-opacity: 0;
+    -webkit-transition: opacity 0.7s;
+    opacity: 0;
+  }
+  ​
+  .formulario2:hover {
+    -webkit-transition: opacity 0.7s;
+    opacity: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  .formularioRegistro {
+    padding: 0px 60px;
+    margin: 0px 70px;
+  }
+  ​
+  .textoIngreso {
+    /* grid-column-start: 9;
+    grid-column-end: 11;
+    grid-row-start: 7;
+    grid-row-end: 8; */
+    z-index: 1;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 3px;
+    font-size: 60px;
+    /* text-align: center;
+    align-self: center; */
+    color: #f7de1c;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -webkit-transition: opacity 0.7s;
+    opacity: 0.7;
+    transition: all 0.7s;
+  }
+  ​
+  .textoIngreso:hover {
+    -webkit-transition: opacity 0.7s;
+    opacity: 0;
+  }
+  ​
+  .textoRegistro {
+    z-index: 1;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 3px;
+    font-size: 60px;
+    color: #706381;
+    z-index: 1;
+    filter: alpha(opacity=10);
+    -moz-opacity: 0.1;
+    -webkit-transition: opacity 0.1s;
+    opacity: 0.3;
+    transition: all 0.9s;
+  }
+  ​
+  .textoRegistro:hover {
+    -webkit-transition: opacity 0.7s;
+    opacity: 0;
+  }
+  ​
+  .ingreso {
+    grid-column-start: 9;
+    grid-column-end: 11;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    z-index: 1;
+    font-family: "Roboto", sans-serif;
+    font-size: 60px;
+    text-align: center;
+    align-self: center;
+    color: #f7de1c;
+    z-index: 1;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -webkit-transition: opacity 0.7s;
+    opacity: 0.7;
+  }
+  ​
+  .bloqueRegistro {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+  }
+  ​
+  .bordeSuperiorR {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 10%;
+    margin: 5px;
+    border-radius: 5px 5px 0px 0px;
+    background: #706381;
+    z-index: 1;
+  }
+  ​
+  .bordeSuperiorI {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 10%;
+    margin: 5px;
+    border-radius: 5px 5px 0px 0px;
+    background: #706381;
+    z-index: 1;
+  }
+  ​
+  .bloqueIngreso {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+  }
+  ​
+  .nombre,
+  .apellido,
+  .contraseña,
+  .confirmarContraseña,
+  .email,
+  .fecha {
+    height: 10%;
+    width: 100%;
+    /* width: 200px;
+    height: 39px; */
+    border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+    -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    border: solid 1px #eee17f;
+    margin-left: -5px;
+    margin-top: 15px;
+    padding-left: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    background: #eee17f;
+    transition: all;
+    letter-spacing: 1px;
+  }
+  ​
+  .emailForm2,
+  .contraseñaForm2 {
+    height: 4vh;
+    width: 20vw;
+    border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+    -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.705);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.705);
+    border: solid 1px #706381;
+    margin-left: -5px;
+    margin-top: 13px;
+    padding-left: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: white;
+    background: #8a7d9b;
+    transition: all;
+    letter-spacing: 1px;
+  }
+  ​
+  .botonRegistro,
+  .botonIngreso {
+    /* grid-column-start: 6;
+    grid-column-end: 7; */
+    /* height: 5vh;
+    width: 10vw; */
+    cursor: pointer;
+    margin: 50px 0px 0px 0px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    /* padding: 10px; */
+    font-size: 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 2px;
+    transition: all;
+  ​
+    /* justify-content: space-between;
+    width: 5%;
+    flex-direction: column; */
+  }
+  ​
+  .amarillo {
+    color: #dbc413;
+    border: 2px #f7de1c solid;
+  }
+  ​
+  .amarillo:hover {
+    color: #fff;
+    background-color: #f7de1c;
+  }
+  ​
+  .morado {
+    color: #706381;
+    border: 2px#706381 solid;
+  }
+  ​
+  .morado:hover {
+    color: #fff;
+    background-color: #706381;
+  }
+  ​
+  .terminos {
+    font-family: "Raleway", "sans-serif";
+    font-size: 13px;
+    transition: all;
+  }
+  ​
+  /* pagina de carga */
+  #cargaLogo {
+    background: radial-gradient(#706381, #635772);
+    /* background: #706381; */
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    transition: all 1s;
+    z-index: 100;
+  ​
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .carga {
+    margin: auto;
+  }
+  .carga img {
+    /* NOTA esta medida es para el responsive
+    width: 250px; */
+    width: 470px;
+  }
+  .borrarCarga {
+    visibility: hidden;
+    opacity: 0;
+  }
+  /* /pagina de carga */
+  /* Estilo al no ingresar datos correctos*/
+  .inputError {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+  }
+  ​
+  /* /Estilo al no ingresar datos correctos*/
+  ​
+  @media screen and (max-width: 576px) {
+    .textoRegistro {
+      opacity: 0;
+    }
+  ​
+    .textoRegistro:hover {
+      opacity: 0;
+    }
+  ​
+    .textoIngreso {
+      opacity: 0;
+    }
+  ​
+    .textoIngreso:hover {
+      opacity: 0;
+    }
+  ​
+    .fondoRegistro {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 1;
+      grid-row-end: 7;
+    }
+  ​
+    .bordeSuperiorR {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  ​
+    .bloqueRegistro {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 1;
+      grid-row-end: -8;
+    }
+  ​
+    .fondoIngreso {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 7;
+      grid-row-end: 14;
+      margin-top: 10px;
+    }
+  ​
+    .bordeSuperiorI {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 7;
+      grid-row-end: 8;
+      margin-top: 10px;
+    }
+  ​
+    .bloqueIngreso {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 7;
+      grid-row-end: 14;
+    }
+  ​
+    .formulario1 {
+      grid-column-start: 5;
+      grid-column-end: 10;
+      grid-row-start: 2;
+      grid-row-end: 6;
+  ​
+      display: flex;
+      justify-content: center;
+      /* justify-content: space-around; */
+      /*  display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; */
+      opacity: 1;
+    }
+  ​
+    .formulario2 {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 7;
+      grid-row-end: 14;
+      opacity: 1;
+    }
+    .formularioRegistro {
+      padding: 0px 0px;
+      margin: 0px 0px;
+    }
+  ​
+    .nombre,
+    .apellido,
+    .contraseña,
+    .confirmarContraseña,
+    .email,
+    .fecha {
+      /* width: 40vw; */
+      /* height: 2vh; */
+      font-size: 10px;
+      height: 5%;
+      width: 100%;
+    }
+  ​
+    .emailForm2,
+    .contraseñaForm2 {
+      height: 10%;
+      width: 50%;
+      font-size: 10px;
+    }
+  ​
+    .botonRegistro {
+      /* height: 4vh; */
+      /* width: 20vw; */
+      font-size: 10px;
+      line-height: 0vh;
+      margin-top: 20px;
+      font-size: 10px;
+      height: 7%;
+    }
+  ​
+    .botonIngreso {
+      height: 4vh;
+      /* width: 20vw; */
+      font-size: 10px;
+      margin-top: 20px;
+      /*  line-height: 1vh; */
+    }
+  ​
+    .terminos {
+      font-size: 7px;
+      letter-spacing: 1px;
+    }
+  ​
+    .carga img {
+      width: 250px;
+    }
+  }

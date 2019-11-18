@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+  <title>She/Code</title>
+</head>
+
+<body>
+  <!-- contenido del preloader -->
+  <div id="cargaLogo">
+    <div class="carga animated flipInX">
+      <img src="imagenes/Logo.png" alt="">
+    </div>
+  </div>
+  <!-- /contenido del preloader -->
+  <div class="contenedor">
+    <!-- Bloque que contiene la palabra "registro" -->
+    <div class="bloqueRegistro">
+      <div class="textoRegistro" id="textoRegistro">REGISTRO</div>
+    </div>
+
+    <!-- Fondo lado izquerdo -->
+    <div id="registro" class="fondoRegistro"></div>
+    <!-- Borde morado izquierdo -->
+    <div class="bordeSuperiorR"></div>
+
+    <!-- Formulario de registro -->
+    <div class="formulario1" id="registro">
+      <form action="home.html" id="form" class="formularioRegistro">
+        <input type="text" id="nombre" placeholder="Nombre" class="nombre" required />
+        <br />
+        <input type="text" id="apellido" placeholder="Apellido" class="apellido" required />
+        <br />
+        <input type="date" id="fechaNacimiento" placeholder="Fecha de nacimiento" class="fecha" required />
+        <br />
+        <input type="email" id="correoElectronico" placeholder="Correo electrónico" class="email" required />
+        <br />
+        <input type="password" id="contrasena" placeholder="Contraseña" class="contraseña" required />
+        <br />
+        <input type="password" id="confirmarContrasena" placeholder="Confirmar contraseña" class="confirmarContraseña"
+          required />
+        <br>
+        <input type="checkbox" id="terminos"> <label for="terminos"><a href="terminos.html" target="_blank">Términos y
+            condiciones</a></label>
+        <br />
+        <br />
+        <!-- Botón de registro-->
+        <button type="submit" id="btnRegistro" class="botonRegistro amarillo">
+          Registarse
+        </button>
+      </form>
+    </div>
+
+    <!-- Bloque que contiene la palabra "ingreso" -->
+    <div class="bloqueIngreso">
+      <h1 class="textoIngreso">INGRESO</h1>
+    </div>
+
+    <!-- Fondo lado derecho -->
+    <div id="ingreso" class="fondoIngreso"></div>
+
+    <!-- Borde morado derecho -->
+    <div class="bordeSuperiorI"></div>
+
+    <!-- Formulario de ingreso -->
+    <div class="formulario2" id="ingresoHover">
+      <form action="home.html" class="formularioIngreso" id="formIngreso">
+        <input type="email" placeholder="Correo electrónico" class="emailForm2" id="correoElectronico2" />
+        <br />
+        <br />
+        <input type="password" placeholder="Contraseña" class="contraseñaForm2" id="contrasena2" />
+        <br>
+        <br>
+        <a href="" id="contrasenaOlvidada"> ¿Olvidó su contraseña?</a>
+        <br />
+        <br />
+
+        <!-- Botón de inicio de sesión -->
+        <button type="submit" class="botonIngreso morado" id="btnIngreso">
+          Iniciar sesión
+        </button>
+      </form>
+    </div>
+
+    <!-- Pie de página con enlace a página de desarrolladoras -->
+    <footer class="pieDePagina">
+      <a href="loginAutor.html">Desarrolladoras ©2019 SheCodes </a>
+    </footer>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+
+</html>
